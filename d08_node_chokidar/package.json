@@ -1,0 +1,13 @@
+{
+  "name": "d08_node_chokidar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "muniox",
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}

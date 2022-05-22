@@ -1,0 +1,20 @@
+{
+  "name": "d06_node_fs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "eslint": "^8.15.0"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.2.0",
+    "lodash": "^4.17.15"
+  }
+}

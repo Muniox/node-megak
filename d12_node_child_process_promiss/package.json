@@ -1,0 +1,9 @@
+{
+  "name": "d12_node_child_process_promiss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.16.0"
+  }
+}

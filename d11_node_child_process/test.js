@@ -1,2 +1,2 @@
 console.log('Hello, World!');
-// console.error('Oh no!');
+console.error('Oh no!');

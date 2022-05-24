@@ -12,7 +12,7 @@ const { exec } = require('child_process');
 //   }
 // });
 
-// to ten piewrwszy błąd
+// to ten pierwszy błąd
 exec('npm xyzxyzxyz', {
   timeout: 1000 * 60 * 2,
 }, (error, stdout, stderr) => {
@@ -25,5 +25,5 @@ exec('npm xyzxyzxyz', {
   }
 });
 
-// ten drugi błąd wyskoczy jeśli dostaniemy jakieś powiadomnienie albo
+// ten drugi błąd wyskoczy, jeśli dostaniemy jakieś powiadomienie albo
 // coś będzie chciało zwrócić naszą uwagę

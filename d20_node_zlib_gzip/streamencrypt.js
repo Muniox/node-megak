@@ -7,19 +7,21 @@ const {ENCRYPTION_SALT} = require('./constants');
 
 (async () => {
 
-    const [,, inputFile, outputFile] = process.argv;
-
+    const [,, inputFile, outputFile, pwd] = process.argv;
+    const algorithm = "aes-192-cbc";
     const key = await scrypt(pwd, ENCRYPTION_SALT, 24);
 
     await pipeline(
         createReadStream(inputFile),
-        createCipher(algorithm, key)
+        createCipher(algorithm, key),
         createWriteStream(outputFile),
     );
     console.log('Done.');
 
 })();
 
+//createCipher oraz createDecipher przy nich dostajemy Deprecation Warning ponieważ zostały wycofane
+//bez iv są mniej bezpieczne. Ale z iv są już wspierne w node
 
 
 //jak będę sie kład to powiedzieć o żelazie

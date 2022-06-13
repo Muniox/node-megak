@@ -1,27 +1,16 @@
-const { Restaurant } = require('./restaurant');
+const { Restaurant } = require('./restaurant-kuba');
 
 const megaRestaurant = new Restaurant();
 let tablesCount = 25;
-
-const decTablesCount = () => {
-    tablesCount--;
-    console.log(`Dostępnych stolików: ${tablesCount}.`);
-};
-
-const incTablesCount = () => {
-    tablesCount++;
-    console.log(`Dostępnych stolików: ${tablesCount}.`);
-};
 
 
 megaRestaurant
     .on('open', () => console.log("Otwarto restaurację."))
     .on('close', () => console.log("Zamknięto restaurację."))
-    .on('reserveTable', decTablesCount)
-    .on('cancelTableReservation', incTablesCount)
-    .on('takeTableWithoutReservation', decTablesCount)
-    .on('markTableAsBroken', decTablesCount)
-    .on('cleanupTable', incTablesCount);
+    .on('tableCountChange', change => {
+        tablesCount += change;
+        console.log(`Dostępnych stolików: ${tablesCount}.`);
+    });
 
 
 megaRestaurant.open(); // "Otwarto restaurację."
